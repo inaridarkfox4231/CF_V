@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>連分数展開</title>
+    <script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$']] } });
+    </script>
+    <script type = "text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      #inputArea{
+        text-align: center;
+      }
+      button{
+        height: 50px;
+        width: 70px;
+        font-size: 20px;
+        background-color: #99CCFF;
+        border-radius: 5px;
+      }
+      button:hover{
+        background-color: #33CCFF;
+      }
+    </style>
+  </head>
+  <body>
+    <div id = "inputArea">
+      <input id = "upper" type = "text">
+      <input id = "lower" type = "text">
+      <button id = "change">Enter</button>
+    </div>
+    <div id = "textext">ここに表示</div>
+    <script src = "./src/tex_2.js"></script>
+  </body>
+</html>
