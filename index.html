@@ -4,40 +4,26 @@
     <meta charset="utf-8">
     <title>連分数展開</title>
     <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ["\\(","\\)"]] } });
-</script>
-<script type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML">
-</script>
-<meta http-equiv="X-UA-Compatible" CONTENT="IE=EmulateIE7" />
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ["\\(","\\)"]] } });
+    </script>
+    <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML">
+    </script>
+    <meta http-equiv="X-UA-Compatible" CONTENT="IE=EmulateIE7" />
     <script type = "text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <style>
-      *{
-        margin: 0;
-        padding: 0;
-      }
-      #inputArea{
-        text-align: center;
-      }
-      button{
-        height: 50px;
-        width: 70px;
-        font-size: 20px;
-        background-color: #99CCFF;
-        border-radius: 5px;
-      }
-      button:hover{
-        background-color: #33CCFF;
-      }
-    </style>
+    <script src="https://frogcat.github.io/canvas-arrow/canvas-arrow.js"></script>
+    <link rel = "stylesheet" href = "./src/stylesheet.css">
   </head>
-  <body>
-    <div id = "inputArea">
+  <body onload = "init()">
+    <div id = "inputArea" class = "element">
+      <canvas id = "field" width = "500" height = "500"></canvas>
       <input id = "upper" type = "text">
       <input id = "lower" type = "text">
       <button id = "change">Enter</button>
     </div>
-    <div id = "textext">ここに表示</div>
-    <script src = "./script.js"></script>
+    <div id = "outputArea" class = "element">
+      <div id = "TEXtext">ここに表示</div>
+    </div>
+    <script src = "./src/script.js"></script>
   </body>
 </html>

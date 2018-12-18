@@ -33,6 +33,6 @@ $('#change').click(function(){
   if(a == NaN || b == NaN){ return; }
   if(a <= 0 || b <= 0){ return; }
   var cf = make_Continued_Fractions(a, b);
-  $('#textext').html("\\[ " + cf_text(cf) + " \\]");
-  MathJax.Hub.Queue(["Typeset",MathJax.Hub, "textext"]);
+  $('#TEXtext').html("\\[ " + cf_text(cf) + " \\]");
+  MathJax.Hub.Queue(["Typeset",MathJax.Hub, "TEXtext"]);
 })
