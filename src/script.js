@@ -56,6 +56,25 @@ function init(){
   }
 }
 
+function setLine(flag){
+  // upper, lowerに対応する確認のための線を引く
+  var ctx = getctx();
+  ctx.beginPath();
+  if(flag == 0){
+    ctx.strokeStyle = "#999"; // 消去用
+    console.log(0);
+  }else{
+    ctx.strokeStyle = "red"; // 確認用
+    console.log(1);
+  }
+  ctx.moveTo(upper * 10, (50 - lower) * 10);
+  ctx.lineTo(upper * 10, 500);
+  ctx.stroke();
+  ctx.moveTo(upper * 10, (50 - lower) * 10);
+  ctx.lineTo(0, (50 - lower) * 10);
+  ctx.stroke();
+}
+
 // カーソル位置(a, b)に対して固定された数を返す感じ
 function update_num(a, b){
   if(a < 5 || a >= 495 || b < 5 || b >= 495){
@@ -65,7 +84,11 @@ function update_num(a, b){
   var new_u = Math.floor((a + 5) / 10);
   var new_l = 50 - Math.floor((b + 5) / 10);
   if(upper != new_u || lower != new_l){
+    // ここで元の線を消して・・
+    //setLine(0);
     upper = new_u, lower = new_l;
+    // ここで新しく線を引くんじゃない？
+    //setLine(1);
     $('#upper').val(upper);
     $('#lower').val(lower);
   }else{
